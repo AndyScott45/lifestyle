@@ -1,0 +1,130 @@
+/* alligns the contents of the page on the top left hand of the page */
+* {
+ margin: 0;
+ padding: 0;
+ box-sizing: border-box;
+}
+
+/* makes the image full and cover the screen, removes the right side white space from the image */
+body, html{
+min-height:100%;
+width:100%;
+height:100%;
+margin: 0px;
+padding: 0px;
+overflow-x: hidden;
+}
+
+/* adds the following features to the body of the document*/
+body{
+  background-image: url("../images/nice1.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  font-family: sans-serif;
+}
+
+/* sets the background color of the menu-bar to black, gives it a maximum width and aligns it at the center */
+.menu-bar{
+  background: rgb(0,0,0);
+  text-align: center;
+  width: 100%;
+  background-size: cover;
+  height:70px;
+  position: absolute;
+}
+
+/* displays the contents of the list horizontally across the page,removes the list style and changes the color to white */
+.menu-bar ul{
+  display: inline-flex;
+  list-style: none;
+  color: #fff;
+}
+
+/* adds the following features to menu-bar ul li contents*/
+.menu-bar ul li{
+  width:170px;
+  margin: 20px;
+  padding: 15px;
+
+}
+
+ /* the a href attribute adds a clickable effect over the list */
+.menu-bar ul li a{
+  text-decoration: none;
+  color: #fff;
+}
+
+/* gives the menu-bar li list a blue hover effect with the first item ('home') being active. */
+.active, .menu-bar ul li:hover{
+  background: gold;
+  border-radius: 3px;
+  max-width: 170px;
+  width: 170px;
+
+}
+
+/* adds various icons to the menu-bar items */
+.menu-bar .fa{
+  margin-right: 8px;
+}
+
+/*stops the sub-menu-1 items from displaying under the menu-bar list */
+.sub-menu-1{
+display: none;
+}
+
+/* positions the sub-menu-1 contents horizontally under the menu-bar list  adding the following features */
+.menu-bar ul li:hover .sub-menu-1{
+  display: block;
+  position: absolute;
+  background-color:green;
+  margin-top:15px;
+  margin-left: -15px;
+  width: 171px;
+  border-radius: 3px;
+}
+
+/* positions the sub-menu-1 contents vertically under the menu-bar list */
+.menu-bar ul li:hover .sub-menu-1 ul{
+    display: block;
+    margin: -1px;/* positions the sub-menu 2 contents directly by the side of sub-menu 1 */
+
+}
+
+/* adds the following features and a dotted straight line under each sub-menu-1 item */
+.menu-bar ul li:hover .sub-menu-1 ul li{
+    width:140px;
+    padding:10px;
+    border-bottom: 1px dotted #fff;
+    background: transparent;
+    border-radius: 0;
+    text-align: left;
+}
+
+/* removes the straight dotted line from the last item in sub-menu-1 list */
+.menu-bar ul li:hover .sub-menu-1 ul li:last-child{
+    border-bottom: none;
+}
+
+/* changes the color of pointer upon hover */
+.menu-bar ul li:hover .sub-menu-1 ul li a:hover{
+    color:#b2ff00;
+}
+
+/* shifts the various fa icons away from the text */
+.fa-angle-right{
+    float: right;
+}
+
+/*prevents the content of sub-menu-2 from displaying */
+.sub-menu-2{
+display: none;
+}
+/* adds the following features to the sub-menu-2 list items */
+.hover-me:hover .sub-menu-2{
+    position: absolute;
+    display: block;
+    margin-top: -40px;
+    margin-left: 140px;
+    background-color:green;
+}
